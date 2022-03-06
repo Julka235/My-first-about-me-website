@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Moje portfolio</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400;700;900&display=swap" rel="stylesheet"> 
+        
+        <link rel="stylesheet" href="styles/styles.css" type="text/css"/>
+        <link rel="stylesheet" href="styles/normalize.css" type="text/css"/>
+        <link rel="stylesheet" href="styles/fontawesome-all.css" type="text/css"/>
+        <!-- viewport to to, na co patrzymy -->
+    </head>
+
+    <!-- niebieski z bordowym, taki kolor strony ładnie mathcinguje-->
+
+    <body>
+        <section id="hero" class="hero-section"> <!-- Sekcja nagłówka -->
+            <div class="container">
+                <header class="header">
+                    <div class="hero-logo">
+                        </span><i class="fa-solid fa-crow"></i><!-- <i class="fas fa-signature fa-3x"></i> -->
+                    </div>
+
+                    <nav>
+                        <div class="mobile-menu-icon" id="mobile-menu-icon">
+                            <i class="fas fa-bars"></i>
+                        </div>
+
+                        <ul class="menu" id="main-menu">
+                            <li><a href="#about">O mnie</a></li> <!-- dlatego się opłaca używać id, bo mamy odnośniki-->
+                            <li><a href="#interests">Zainteresowania</a></li>
+                            <li><a href="#photos">Zdjęcia</a></li>
+                            <li><a href="#contact">Kontakt</a></li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <div class="hero-content">
+                    <h1 class="hero-title"> Cześć! </h1>
+                    <p class="hero-lead"> Mam na imię Julia. Jestem w liceum na profilu informatycznym, jednak poza szkołą rozwijam także inne pasje, zupełnie niezwiązane z informatyką. 
+                    </p>
+                    <a class="hero-button" href="#about">Poznajmy się!</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section"> <!-- Sekcja o mnie -->
+            <div class="container">
+                <div class="columns-container columns-2-container">
+                    <div class="column about-image">
+                        <img src="images/Julia_Czosnek.jpg" alt="Moje zdjęcie">
+                    </div>
+
+                    <div class="column about-text">   
+                        <h2 class="section-title"> O mnie </h2> <!-- imho powinno być about-title, ale potem będę się tym martwić-->
+                        <p> <strong> <span style="font-size:25px;"> Jestem Julia. </span></strong></p>
+                        <p> Tak jak już wcześniej wspomniałam, uczęszczam do trzeciej klasy liceum na profil matematyczno-fizyczno-informatyczny.
+                            Do moich ulubionych przedmiotów należą także język polski, biologia, język angielski i język hiszpański.
+                        </p>
+                        <p>
+                            Strasznie dużo czasu przeznaczam na naukę szkolną, jednak kiedy już udaje mi się znaleźć wolną chwilę, poświęcam się
+                            różnym z moich pasji. Najczęściej sięgam po dobrą książkę (moją ulubioną jest seria o Harrym Potterze)
+                            albo oglądam jakiś film, zazwyczaj horror lub polecony przez znajomych klasyk swojego gatunku.
+                        </p>
+                        <p>
+                            Jeśli chodzi o bardziej twórcze zainteresowania, uwielbiam zarówno czytać, jak i pisać wiersze, głównie prozę. Zdarza mi się
+                            także twórzyć krótsze lub dłuższe opowiadania, zainspirowane ostatnio przeczytaną książką. 
+                        </p>
+                        <p>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="interests" class="section section-violet interests-section"> <!-- Zainteresowania -->
+            <div class="container">
+                <div class="columns-container columns-4-container">
+                    <div class="column">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <h3 class="interest-name"> Programowanie </h3>
+                        <p class="interest-text">
+                            Od czterech lat uczę się programowania. Używam głównie języka C++.
+                            Interesuję się także algorytmiką. Nowo poznane algorytmy
+                            używam do rozwiązywania zadań programistycznych.
+                        </p>
+                    </div>
+
+                    <div class="column">
+                        <i class="fa-solid fa-book-open"></i>
+                        <h3 class="interest-name"> Literatura </h3>
+                        <p class="interest-text">
+                            Gatunki, którymi się głównie interesuję, to kryminał, thriller, literatura faktu oraz literatura piękna.
+                            Nie przepadam za powieściami historycznymi i science fiction.
+                        </p>
+                    </div>
+                
+                    <div class="column">
+                        <i class="fa-solid fa-brain"></i>
+                        <h3 class="interest-name"> Neurobiologia </h3>
+                        <p class="interest-text">
+                            Jednym z moich ulubionych przedmiotów jest biologia. Najbardziej fascynuje mnie układ nerwowy, w szczególności mózg.
+                            W wolnym czasie lubię czytać książki i artykuły na ten temat.
+                        </p>
+                    </div>
+
+                    <div class="column">
+                        <i class="fa-solid fa-comment"></i>
+                        <h3 class="interest-name"> Lingwistyka </h3>
+                        <p class="interest-text">
+                            Uwielbiam poznawać nowe języki obce. Poza samą ich nauką interesuję się także etymologią słów, ewolucją języków na przestrzeni lat oraz ich przekładem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="photos" class="section photos-section"> <!-- Zdjęcia -->
+            <div class="container">
+                <h2 class="photos-title">Zdjęcia </h2>
+                <p class="photos-lead">
+                    Poniżej znajdują się zdjęcia, które mi się bardzo spodobały i uznałam, że dobrze obrazują moją osobowość i zainteresowania.
+                </p>
+                <div class="columns-container columns-3-container">
+                    <div class="column">
+                        <figure>
+                            <img src="images/ksiazki-stanislaw-kondratiev.jpg" alt="Książki">
+                            <figcaption> Zdjęcie autorstwa <strong>Stanislav Kondratiev</strong> z <strong>Pexels</strong> </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="column">
+                        <figure>
+                            <img src="images/chmurki-eberhard-grossgasteiger.jpg" alt="Chmurki">
+                            <figcaption> Zdjęcie autorstwa <strong>Eberhard Grossgasteiger</strong> z <strong>Pexels</strong> </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="column">
+                        <figure>
+                            <img src="images/kino-donald-tong.jpg" alt="Kino">
+                            <figcaption> Zdjęcie autorstwa <strong>Donald Tong</strong> z <strong>Pexels</strong> </figcaption>
+                        </figure>
+                    </div>
+                    
+                    <div class="column">
+                        <figure>
+                            <img src="images/pexels-sindre-strøm-1144176.jpg" alt="Rzeka i las o zachodzie słońca">
+                            <figcaption> Zdjęcie autorstwa <strong>Sindre Strøm</strong> z <strong>Pexels</strong> </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="column">
+                        <figure>
+                            <img src="images/herbatka-thought-catalog.jpg" alt="Herbata i książki">
+                            <figcaption> Zdjęcie autorstwa <strong>Thought Catalog</strong> z <strong>Pexels</strong> </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="column">
+                        <figure>
+                            <img src="images/gory-stephan-seeber.jpg" alt="Góry">
+                            <figcaption> Zdjęcie autorstwa <strong>Stephen Seeber</strong> z <strong>Pexels</strong> </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quote" class="section quote-section section-pink"> <!-- Cytat --> <!-- imho section-red -->
+            <div class="container">
+                <i class="fas fa-quote-left fa-5x fa-pull-left"></i>
+                <p class="quote-text"> 
+                    To nasze wybory ukazują, kim naprawdę jesteśmy, o wiele bardziej, niż nasze zdolności. 
+                </p>
+                <p class="quote-author">
+                    <em>Harry Potter i Komnata Tajemnic</em> J.K. Rowling
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section"> <!-- Kontakt -->
+            <div class="container">
+                <h2 class="contact-title"> Napisz do mnie</h2>
+                <form class="contact-form" name="contact-form">
+                    <div class="name-email-message">
+                        <label class="label" for="name"> Imię:</label>
+                        <input type="text" id="name" name="name" placeholder="Imię" required>
+                
+                        <label class="label" for="email"> E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="imie.nazwisko@gmail.com" required>
+
+                        <label class="label" for="message"> Miejsce na Twoją wiadomość:</label>
+                        <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                    </div>
+
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label class="checkbox-label" for="newletter">Zasubskrybuj do mojego newslettera</label>
+                    
+                    <button type="submit" class="submit-button" id="form-submit">Wyślij</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer section-violet"> <!-- Stopka -->
+            <div class="container">
+                <div class="copyrights">
+                    <p>&copy; Julia Czosnek - projekt STEAM Academy 2022</p>
+                    <br> <!-- break -->
+                    <p> Główne zdjęcie autorstwa <strong>John Cahil Rom</strong> z <strong>Pexels</strong></p>
+                </div>
+
+                <div class="social">
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a href="https://ekipa.tumblr.com/" target="_blank"><i class="fab fa-tiktok fa-2x"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

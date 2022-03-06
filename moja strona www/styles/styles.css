@@ -1,0 +1,587 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-size: 18px;
+    color: #373737; /* komentarz */
+    font-family: 'Catamaran', sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Typography */
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h2, h3
+{
+    font-weight: 100;
+    margin: 0 0 20px;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 70px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+@media screen and (max-width: 1140px) {
+    .container {
+        max-width: auto;
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+/* Header and menu*/
+
+.header {
+    padding: 30px 20px 0;
+    display: flex; /* popudełeczkowanie elementów */
+    justify-content: space-between;
+}
+
+nav {
+    /* position: sticky; - robi to, że menu się zatrzymuje na górze ciągle*/
+    text-align: right;
+}
+
+.menu {
+    list-style-type: none; /* żeby nam to nie listowało, jak to automatycznie robi*/
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none; /* żeby na komputer sam nic nie odwalał */
+    font-size: 18px;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease-in;
+}
+
+.menu a:hover {
+    border-bottom: 3px solid #99004d;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .menu li {
+        display: block;
+    }
+
+    .menu a {
+        display: inline-block;
+    }
+
+    .mobile-menu-icon {
+        display: inline-block;
+    }
+
+    .mobile-menu-icon:hover {
+        cursor: pointer;
+    }
+
+    .mobile-menu-icon.opened i::before {
+        content: "\f00d";
+    }
+
+    .menu.opened {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        text-align: right;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    color: #ffffff;
+    background-image: url("pexels-john-cahil-rom-2170473.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-color: #0099e6;
+    width: 100%;
+    height: 120vh; /* vh - viewport height */
+}
+
+.hero-logo {
+    color: #99004d;
+    padding-left: 150px;
+}
+
+.hero-logo i {
+    font-size: 40px;
+}
+
+.hero-title {
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 1;
+    margin: 100px 0 40px;
+}
+
+.hero-content {
+    padding-left: 150px;
+    margin-bottom: 200px;
+}
+
+/*
+The margin property sets the margins for an element, and is a shorthand property for the following properties:
+
+    margin-top
+    margin-right
+    margin-bottom
+    margin-left
+
+If the margin property has four values:
+
+    margin: 10px 5px 15px 20px;
+        top margin is 10px
+        right margin is 5px
+        bottom margin is 15px
+        left margin is 20px
+
+If the margin property has three values:
+
+    margin: 10px 5px 15px;
+        top margin is 10px
+        right and left margins are 5px
+        bottom margin is 15px
+
+If the margin property has two values:
+
+    margin: 10px 5px;
+        top and bottom margins are 10px
+        right and left margins are 5px
+
+If the margin property has one value:
+
+    margin: 10px;
+        all four margins are 10px
+
+analogicznie dla paddingu
+*/
+
+.hero-lead {
+    font-size: 22px;
+    max-width: 45%;
+    margin-bottom: 50px;
+}
+
+.hero-button {
+    color: white;
+    border: 3px solid #99004d;
+    text-decoration: none;
+    padding: 8px 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.1s ease-in;
+}
+
+.hero-button:hover {
+    background-color: #99004d;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-title {
+        font-size: 90px;
+    }
+
+    .hero-lead {
+        max-width: 100%;
+        font-size: 20px;
+    }
+
+    .hero-content,
+    .hero-logo
+    {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-lead {
+        max-width: 75%;
+    }
+
+    .hero-content,
+    .hero-logo
+    {
+        padding-left: 100px;
+    }
+}
+
+/* Columns */
+.columns-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.columns-2-container .column {
+    width: 45%;
+}
+
+.columns-3-container {
+    flex-wrap: wrap;
+    row-gap: 25px;
+}
+
+.columns-3-container .column{
+    width: 32%;
+}
+
+.columns-4-container .column {
+    text-align: center;
+    flex-basis: 25%; /* bo mamy cztery zainteresowania więc dzielimy na 4 części */
+}
+
+@media screen and (max-width: 992px) {
+    .columns-3-container {
+        flex-direction: row;
+    }
+
+    .columns-3-container .column {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .columns-container {
+        flex-direction: column;
+    }
+
+    .columns-2-container .column,
+    .columns-3-container .column {
+        width: 100%;
+    }
+
+    .columns-4-container {
+        row-gap: 20px;
+    }
+}
+
+/* Sections */
+
+.section {
+    padding: 100px 0;
+}
+
+.section-violet {
+    background-color: #0099e6;
+
+    color: white;
+}
+
+.section-pink {
+    background-color: #99004d;
+    color: white;
+}
+
+.section-title {
+    color: #99004d
+}
+
+/* About Section */
+
+.about-section {
+    padding: 120px 0;
+}
+
+.about-image {
+    text-align: center;
+    max-height: 550px;
+    position: relative;
+}
+
+.about-image img {
+    max-height: 550px;
+}
+
+.about-image::before {
+    content: "";
+    border: 20px solid #0099e6;
+    position: absolute;
+    top: -35px;
+    left: 5px;
+    width: 412px;
+    height: 550px;
+    z-index: -2;
+    box-sizing: border-box;
+}
+
+.about-image::after {
+    content: "";
+    background-color: #99004d;
+    position: absolute;
+    top: 35px;
+    right: 5px;
+    width: 412px;
+    height: 550px;
+    z-index: -1;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .about-text {
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about-text {
+        margin-top: 100px;
+    }
+}
+
+/* Interests Section */
+
+.interests-section i {
+    border: 2px solid #99004d;
+    padding: 25px;
+    border-radius: 50%;
+    font-size: 50px;
+}
+
+.interest-name {
+    margin: 20px 0;
+}
+
+.interest-text {
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+/* Photos Section */
+
+.photos-title {
+    text-align: center;
+    color: #0099e6;
+}
+
+.photos-lead {
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.photos-section figure {
+    margin: 0;
+}
+
+.photos-section img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.photos-section figcaption {
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .photos-lead {
+        max-width: 100%;
+    }
+    
+    .photos-section img {
+        max-height: 350px;
+    }
+}
+
+/* Quote Section */
+
+.quote-section {
+    padding: 80px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.quote-section::after {
+    content: "";
+    background-color: #0099e6;
+    position: absolute;
+    right: -90px;
+    bottom: -75px;
+    width: 350px;
+    height: 350px;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.quote-section i {
+    color: #0099e6;
+}
+
+.quote-text {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.quote-author {
+    text-align: right;
+    font-size: 14px;
+    z-index: 2;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .quote-text {
+        font-size: 30px;
+    }
+}
+
+/* Contact Section */
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea {
+    display: inline-block;
+}
+
+.name-email-message label,
+.name-email-message input,
+.name-email-message textarea {
+    display: block;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 3px solid #99004d;
+    border-radius: 0;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    padding-bottom: 10px;
+}
+
+.submit-button {
+    color: #0099e6;
+    background-color: white;
+    border: 3px solid #0099e6;
+    text-decoration: none;
+    padding: 10px 40px;
+    margin: 30px auto 0;
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.1s ease-in;
+}
+
+.submit-button:hover {
+    background-color: #0099e6;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form {
+        width: 100%;
+    }
+}
+
+/* Footer */
+
+.footer {
+    padding: 40px 0;
+}
+
+.copyrights,
+.social {
+    width: 49%;
+    display: inline-block;
+}
+
+.social {
+    text-align: right;
+}
+
+.social a {
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .social,
+    .copyrights {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .social {
+        margin-top: 30px;
+
+    }
+
+}
+
+/*
+ładne kolory:
+#4f247c
+#bf0034
+
+*/
